@@ -130,14 +130,14 @@ The complete device additionally uses an **LCD1602 display with an I²C interfac
 
 ## Documentation (Russian)
 
-- [Схема электрическая структурная (Э1)](docs/original-ru/li-ion-18650-capacity-meter_E1_block-diagram.pdf)
-- [Схема электрическая принципиальная (Э3)](docs/original-ru/li-ion-18650-capacity-meter_E3_schematic.PDF)
-- [Перечень элементов (ПЭ3)](docs/original-ru/li-ion-18650-capacity-meter_PE3_part-list.pdf)
-- [Чертёж печатной платы](docs/original-ru/li-ion-18650-capacity-meter_PP_board-drawing.PDF)
-- [Сборочный чертёж электронной ячейки](docs/original-ru/li-ion-18650-capacity-meter_SB_board-drawing-pcb.pdf)
-- [Сборочный чертёж устройства](docs/original-ru/li-ion-18650-capacity-meter_SP_board-drawing-device.pdf)
-- [Спецификация электронной ячейки](docs/original-ru/li-ion-18650-capacity-meter_SP_specification-pcb.pdf)
-- [Спецификация устройства](docs/original-ru/li-ion-18650-capacity-meter_SP_specification-devicepdf.pdf)
+- [Block Diagram (E1)](docs/original-ru/li-ion-18650-capacity-meter_E1_block-diagram.pdf)
+- [Schematic (E3)](docs/original-ru/li-ion-18650-capacity-meter_E3_schematic.PDF)
+- [Parts List (PE3)](docs/original-ru/li-ion-18650-capacity-meter_PE3_part-list.pdf)
+- [PCB Drawing](docs/original-ru/li-ion-18650-capacity-meter_PP_board-drawing.PDF)
+- [PCB Assembly Drawing](docs/original-ru/li-ion-18650-capacity-meter_SB_board-drawing-pcb.pdf)
+- [Device Assembly Drawing](docs/original-ru/li-ion-18650-capacity-meter_SP_board-drawing-device.pdf)
+- [PCB Assembly Specification](docs/original-ru/li-ion-18650-capacity-meter_SP_specification-pcb.pdf)
+- [Device Specification](docs/original-ru/li-ion-18650-capacity-meter_SP_specification-devicepdf.pdf)
 
 ## Design and Manufacturing Files
 
