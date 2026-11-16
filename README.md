@@ -37,7 +37,7 @@ Capacity is accumulated as **Q = Σ(I × Δt) / 3600**, with current in mA and t
 
 [![PCB bottom layer](hardware/images/pcb-layout-bottom.png)](hardware/images/pcb-layout-bottom.png)
 
-The PCB measures **85 × 70 mm** and uses **two copper layers** with ground pours. The report specifies FR-4 with a **1.5 mm dielectric thickness** and **35 µm starting copper foil**. Most passive components use the 1206 package; the two discharge resistors, LEDs, battery holder, and headers use through-hole mounting. The battery holder is integrated into the board layout.
+The PCB measures **85 × 70 mm** and uses **two copper layers** with ground pours. The board uses FR-4 with a **1.5 mm dielectric thickness** and **35 µm starting copper foil**. Most passive components use the 1206 package; the two discharge resistors, LEDs, battery holder, and headers use through-hole mounting. The battery holder is integrated into the board layout.
 
 ## Assembled Device
 
@@ -67,7 +67,7 @@ The photograph shows the assembled unit in charging mode, with the cell voltage 
 
 ### Prototype Results
 
-The report records the following results for one test cell labelled **800 mAh**:
+Prototype testing produced the following results for one test cell labelled **800 mAh**:
 
 | Parameter | Recorded result |
 | --- | ---: |
@@ -79,46 +79,46 @@ The report records the following results for one test cell labelled **800 mAh**:
 | End-of-charge voltage | 4.19 V on the device / 4.20 V on the multimeter |
 | Charging duration | 1 h 10 min |
 
-These are results for the tested sample. The difference from the cell's labelled capacity is not a calibration measurement of the instrument. The report also notes a voltage-reading offset during discharge, which affects calculated current and capacity.
+These are results for the tested sample. The difference from the cell's labelled capacity is not a calibration measurement of the instrument. A voltage-reading offset was observed during discharge, which affects calculated current and capacity.
 
 ## Bill of Materials
 
-The PCB BOM below is compiled from the schematic and report. Blank manufacturer or part-number fields are left for completion; the CSV uses the same entries.
+The table reproduces the project CSV BOM; unit symbols in the value column are formatted for readability.
 
 | Designators | Qty | Value / Part | Description | Manufacturer | Part Number | Package |
 | --- | ---: | --- | --- | --- | --- | --- |
-| C1, C2, C6–C9 | 6 | 0.1 µF | Ceramic capacitor, 100 V, ±10% | Murata | — | 1206 |
-| C3 | 1 | 10 µF | Ceramic capacitor, 10 V, ±10% | Murata | — | 1206 |
-| C4, C5 | 2 | 10 µF | Electrolytic capacitor, 16 V, ±20% | JB Capacitors | JCK1C100M040054 | SMD, Ø4 mm |
-| DA1 | 1 | DW01A | Single-cell Li-ion protection controller | — | DW01A | SOT-23-6 |
-| DA2 | 1 | FS8205A | Dual N-channel MOSFET | Fortune Semiconductor | FS8205A | TSSOP-8 |
-| DA3 | 1 | TP4056 | Single-cell Li-ion charge controller | UMW | TP4056 | ESOP-8 |
-| DA4 | 1 | AMS1117-3.3 | Linear voltage regulator, 3.3 V | UMW | AMS1117-3.3 | SOT-223 |
-| DD1 | 1 | STM32F051K8T6 | 32-bit Arm Cortex-M0 microcontroller | STMicroelectronics | STM32F051K8T6 | LQFP-32 |
-| HL1 | 1 | Yellow | Indicator LED | G-nor Electronics | GNL-3014YD | THT, Ø3 mm |
-| HL2 | 1 | Green | Indicator LED | G-nor Electronics | GNL-3014GD | THT, Ø3 mm |
-| HL3 | 1 | Red | Indicator LED | G-nor Electronics | GNL-3014HD | THT, Ø3 mm |
-| R1 | 1 | 1 kΩ | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R2, R3 | 2 | 200 Ω | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R4, R5 | 2 | 5.1 kΩ | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R6, R17–R19 | 4 | 100 Ω | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R7 | 1 | 1.2 kΩ | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R9 | 1 | 510 Ω | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R11–R16 | 6 | 10 kΩ | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R20, R21 | 2 | 4.7 kΩ | Chip resistor, 0.25 W, ±1% | Yageo | — | 1206 |
-| R8 | 1 | 10 Ω | Power resistor, 2 W, ±5% | — | — | Axial, THT |
-| R10 | 1 | 20 Ω | Power resistor, 2 W, ±5% | — | — | Axial, THT |
-| SW1 | 1 | IT-1181A | Reset tactile switch | RUICHI | IT-1181A | SMD |
-| SW2 | 1 | 2-pin | Header for the external control button, 2.54 mm pitch | Connfly | DS1022-1*2RDF11-B | Right-angle, THT |
-| VD1 | 1 | BZT52C3V3S | Zener diode, 3.3 V, 0.2 W | — | BZT52C3V3S | SOD-323 |
-| VT1, VT3 | 2 | IRLML2502 | N-channel MOSFET, 20 V | — | IRLML2502 | SOT-23 |
-| VT2 | 1 | IRLML6402 | P-channel MOSFET, −20 V | — | IRLML6402 | SOT-23 |
-| XP1 | 1 | 4-pin | Display connector, 2.5 mm pitch | JST | B4B-XH-A(LF)(SN) | THT |
-| XS1 | 1 | USB Type-C | Power input receptacle, 6 contacts | RUICHI | USB3.1 TYPE-C 06PF-027 | SMD / THT |
-| XS2 | 1 | 18650 | Single-cell battery holder | KLS | KLS5-18650-D | THT |
-| XS3 | 1 | 4-pin | SWD programming connector, 2.54 mm pitch | Connfly | DS1021-1*4SF11-B | THT |
+| C1, C2, C6, C7, C8, C9 | 6 | 0.1 µF | Multilayer ceramic capacitor, 10% tolerance | Murata | GRM31C5C2A104JA01L | 1206 |
+| C3 | 1 | 10 µF | Multilayer ceramic capacitor, 10% tolerance | Murata | GRM31CR61A106KA01L | 1206 |
+| C4, C5 | 2 | 10 µF | Polarized electrolytic capacitor, 10 µF, 16 V, 20% tolerance | JB Capacitors | JCK1C100M040054 | ECAP SMD |
+| DA1 | 1 | DW01A | Single-cell Li-ion battery protection controller | PUOLOP | DW01A | SOT-23-6 |
+| DA2 | 1 | FS8205A | Dual N-channel power MOSFET | Fortune | FS8205A | TSSOP-8 |
+| DA3 | 1 | TP4056 | Single-cell linear Li-ion battery charger with charge-status outputs | UMW | UMW TP4056 | ESOP-8 |
+| DA4 | 1 | AMS1117-3.3 | Fixed-output linear voltage regulator, 3.3 V | UMW | AMS1117-3.3 | SOT-223 |
+| DD1 | 1 | STM32F051K8T6 | 32-bit Arm Cortex-M0 microcontroller, 48 MHz, 64 KB Flash | STMicroelectronics | STM32F051K8T6 | LQFP-32 |
+| HL1 | 1 | GNL-3014YD | Yellow LED 3mm | G-nor Optoelectronics | GNL-3014YD | THT |
+| HL2 | 1 | GNL-3014GD | Green LED 3mm | G-nor Optoelectronics | GNL-3014GD | THT |
+| HL3 | 1 | GNL-3014HD | Red LED 3mm | G-nor Optoelectronics | GNL-3014HD | THT |
+| R1 | 1 | 1 kΩ | Fixed resistor 0.25W | Yageo | RC1206FR-071KL | 1206 |
+| R2, R3 | 2 | 200 Ω | Fixed resistor 0.25W | Yageo | RC1206FR-07200RL | 1206 |
+| R4, R5 | 2 | 5.1 kΩ | Fixed resistor 0.25W | Yageo | RC1206JR-075K1L | 1206 |
+| R6, R17, R18, R19 | 4 | 100 Ω | Fixed resistor 0.25W | Yageo | RC1206JR-07100RL | 1206 |
+| R7 | 1 | 1.2 kΩ | Fixed resistor 0.25W | Yageo | RC1206FR-071K2L | 1206 |
+| R8 | 1 | 10 Ω | Fixed resistor 2W | Yageo | MO-2W-10RJ | C2-23 |
+| R9 | 1 | 510 Ω | Fixed resistor 0.25W | Yageo | RC1206FR-07510RL | 1206 |
+| R10 | 1 | 20 Ω | Fixed resistor 2W | Yageo | MO-2W-20RJ | C2-23 |
+| R11, R12, R13, R14, R15, R16 | 6 | 10 kΩ | Fixed resistor 0.25W | Yageo | RC1206FR-0710KL | 1206 |
+| R20, R21 | 2 | 4.7 kΩ | Fixed resistor 0.25W | Yageo | RC1206FR-074K7L | 1206 |
+| SW1 | 1 | IT-1181A | Two-terminal switch internal | Ruichi | IT-1181A W=0.6mm [6x3x2.5] | SMD |
+| SW2 | 1 | PLS-2R | Two-terminal switch external | Connfly Electronics | DS1022-1*2RDF11-B | THT |
+| VD1 | 1 | BZT52C3V3S | Zener diode, 3.3 V, 0.2 W | Hottech | BZT52C3V3S | SOT-323 |
+| VT1, VT3 | 2 | IRLML2502 | N-channel power MOSFET, 20 V | Hottech | IRLML2502 | SOT-23 |
+| VT2 | 1 | IRLML6402 | P-channel power MOSFET, -20 V | Huashao | IRLML6402 | SOT-23 |
+| XP1 | 1 | B4B-XH-A | 4-position plug connector | JST | B4B-XH-A | THT |
+| XS1 | 1 | USB-C-6Pin | USB Type-C power receptacle, 6 contacts | Ruichi | USB3.1 TYPE-C 6PF-027 | SMD |
+| XS2 | 1 | Battery 18650 | Single-cell 18650 battery holder | KLS Electronics | L-KLS5-18650-006-D | THT |
+| XS3 | 1 | PLS-4 | 4-position socket connector | Connfly Electronics | DS1021-1*4SF11-B | THT |
 
-[Download the BOM summary CSV](docs/li-ion-18650-capacity-meter_BOM-summary.csv)
+[CSV BOM](docs/li-ion-18650-capacity-meter.csv) · [Altium BOM document](hardware/altium/li-ion-18650-capacity-meter.BomDoc)
 
 The complete device additionally uses an **LCD1602 display with an I²C interface**, an external **PBS-33B-B button**, the printed enclosure, wiring, LED spacers, and M3 fasteners. These items are separate from the PCB BOM.
 
@@ -130,20 +130,15 @@ The complete device additionally uses an **LCD1602 display with an I²C interfac
 
 ## Documentation (Russian)
 
-[Расчётно-пояснительная записка и приложения](docs/original-ru/li-ion-18650-capacity-meter_report.docx)
+- [Схема электрическая структурная (Э1)](docs/original-ru/li-ion-18650-capacity-meter_E1_block-diagram.pdf)
+- [Схема электрическая принципиальная (Э3)](docs/original-ru/li-ion-18650-capacity-meter_E3_schematic.PDF)
+- [Перечень элементов (ПЭ3)](docs/original-ru/li-ion-18650-capacity-meter_PE3_part-list.pdf)
+- [Чертёж печатной платы](docs/original-ru/li-ion-18650-capacity-meter_PP_board-drawing.PDF)
+- [Сборочный чертёж электронной ячейки](docs/original-ru/li-ion-18650-capacity-meter_SB_board-drawing-pcb.pdf)
+- [Сборочный чертёж устройства](docs/original-ru/li-ion-18650-capacity-meter_SP_board-drawing-device.pdf)
+- [Спецификация электронной ячейки](docs/original-ru/li-ion-18650-capacity-meter_SP_specification-pcb.pdf)
+- [Спецификация устройства](docs/original-ru/li-ion-18650-capacity-meter_SP_specification-devicepdf.pdf)
 
-| Документ | Приложение в РПЗ |
-| --- | --- |
-| Схема электрическая структурная (Э1) | А |
-| Схема электрическая принципиальная (Э3) | Б |
-| Перечень элементов (ПЭ3) | В |
-| Алгоритм работы устройства | Г |
-| Чертёж печатной платы | Д |
-| Сборочный чертёж электронной ячейки | Е |
-| Спецификация электронной ячейки | Ж |
-| Сборочный чертёж устройства | И |
-| Спецификация устройства | К |
-| Схема сборки электронной ячейки | Л |
-| Схема сборки устройства | М |
-| 3D технологический процесс сборки | Н |
-| Плакат демонстрационный | П |
+## Design and Manufacturing Files
+
+[Altium project](hardware/altium/li-ion-18650-capacity-meter.PrjPcb) · [Component libraries](hardware/altium/libs/) · [Gerber archive](fabrication/li-ion-18650-capacity-meter_gerber.zip) · [PCB STEP model](fabrication/li-ion-18650-capacity-meter.step) · [Device STEP model](fabrication/li-ion-18650-capacity-meter_device.stp)
